@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --corPadrao1: #020087;
+    --corLetras: #B7B7B7;
+    --font: Arial, Helvetica, sans-serif;
+    --bkRodape:#454545;
+}
+
+main {
+  color: #FFF;  
+    max-width: 100%;
+    font-family: var(--font);
+  
+}
+.logo{
+margin:150px;
+
+}
+
+
+.numContatos {
+    background-color: var(--corPadrao1);
+    padding: 5px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.numContatos>span {
+    position: relative;
+    right: 200px;
+  
+}
+span{
+    color: #FFF;
+}
+.menuPrimario {
+    display: flex;
+    
+}
+
+.menuPrimario > li {
+    left: 80em;
+    margin-left: 10px; 
+    position: relative;
+    top: -15px;
+    display: inline;
+    
+}
+
+
+.menuPrimario > li > a {
+    color: #B7B7B7;
+    text-decoration: none;
+    font-size: 15pt;
+    font-family:var(--font);
+}
+
+
+ .sub-menu-1{
+    display: none;
+   
+    width: 150px;
+    height: 110px;
+    text-align: center;
+    z-index: 6;
+    list-style: none;
+}
+
+.sub-menu-1  a{
+    text-decoration: none;
+    font-size: 15pt;
+    color:#FFF;
+    line-height: 27px;
+}
+
+
+
+ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color: var(--corPadrao1);
+  
+}
+
+
+.menuPrimario ul li:hover .sub-menu-1{
+    display: block;
+}
+
+.sub-menu-1 li:hover  {
+    background-color: rgba(212, 212, 220, 0.246);
+    width: 150px;
+    text-align: center;
+    transition: all 0.8s;
+} 
+
+.sub-menu-2{
+display: none;
+}
+
+
+.hover-sub:hover .sub-menu-2 {
+display: block;
+position: absolute;
+margin-left: 150px;
+margin-top: -26px;
+background-color: var(--corPadrao1);
+width: 150px;
+list-style: none;
+
+}
+
+.logoMaior{
+    position: relative;
+    left: 55em;
+    top:-400px;
+}
+
+section{
+    color: var(--corLetras);
+    width: 500px;
+    position: relative;
+    left: 20%;
+   
+}
+section p{ 
+    margin-top: 50px;
+
+}
+
+.rodape{
+    color: var(--corLetras);
+    background-color: var(--bkRodape);
+    
+}
+.rodape > ul {
+    display: flex;
+    padding:  50px;
+   
+}
+
+.rodape > ul > li {
+   list-style: none;
+   margin:  10px;
+   left: 700px;
+   right: auto;
+   position: relative;
+   cursor: pointer;
+
+}
+
+table{
+    position: relative;
+    left: -150px;
+    text-align: center;
+   
+}
+table img{
+    width: 300px;
+    
+}
+table td p{
+
+width: 300px;
+height: 80px;
+text-align: center;
+}
