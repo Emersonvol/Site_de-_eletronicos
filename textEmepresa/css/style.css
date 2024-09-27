@@ -1,171 +1,345 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url('/css/reset.css');
 
 :root {
-    --corPadrao1: #020087;
-    --corLetras: #B7B7B7;
+    --corPrimaria: #020087;
+    --corSecundaria: #5955bf;
+    --corTerciaria: #01034a;
+    --corQuaternaria: #FFF;
+    --hoverRodape: #4e5f9a;
     --font: Arial, Helvetica, sans-serif;
-    --bkRodape:#454545;
 }
-
-main {
-  color: #FFF;  
-    max-width: 100%;
-    font-family: var(--font);
-  
-}
-.logo{
-margin:150px;
-
-}
-
 
 .numContatos {
-    background-color: var(--corPadrao1);
-    padding: 5px;
+    background-color: var(--corPrimaria);
+    padding: .7em 8em;
     text-align: right;
-    margin-bottom: 15px;
+    margin-bottom: 3em;
+    font-size: 1.2em;
+
 }
 
-.numContatos>span {
-    position: relative;
-    right: 200px;
-  
+.logo {
+    margin: 5.375em;
+
 }
-span{
-    color: #FFF;
-}
+
 .menuPrimario {
     display: flex;
-    
+    justify-content: flex-end;
+    margin: 0 8em;
 }
 
-.menuPrimario > li {
-    left: 80em;
-    margin-left: 10px; 
-    position: relative;
-    top: -15px;
-    display: inline;
-    
+.menuPrimario li {
+    margin: 1em 1em;
+    border-bottom: 1px solid var(--corPrimaria);
 }
 
+.ative {
+    color: var(--corPrimaria);
 
-.menuPrimario > li > a {
-    color: #B7B7B7;
+}
+
+.menuPrimario li a {
+    color: var(--corSecundaria);
     text-decoration: none;
     font-size: 15pt;
-    font-family:var(--font);
+    font-family: var(--font);
+    transition: ease-in-out .3s;
 }
 
+.menuPrimario a:hover {
+    color: var(--corPrimaria);
+    border-bottom: 1px solid var(--corPrimaria);
+}
 
- .sub-menu-1{
+.sub-menu-1 {
     display: none;
-   
-    width: 150px;
-    height: 110px;
     text-align: center;
     z-index: 6;
     list-style: none;
+    width: 10.5em;
 }
 
-.sub-menu-1  a{
+.sub-menu-1 a {
     text-decoration: none;
     font-size: 15pt;
-    color:#FFF;
-    line-height: 27px;
+    color: var(--corQuaternaria);
+    font-weight: 700;
+    line-height: 21px;
 }
 
-
-
-ul li:hover .sub-menu-1{
+ul li:hover .sub-menu-1 {
     display: block;
     position: absolute;
-    background-color: var(--corPadrao1);
-  
+    background-color: var(--corPrimaria);
 }
 
-
-.menuPrimario ul li:hover .sub-menu-1{
+.menuPrimario ul li:hover .sub-menu-1 {
     display: block;
 }
 
-.sub-menu-1 li:hover  {
-    background-color: rgba(212, 212, 220, 0.246);
-    width: 150px;
+.sub-menu-1 li:hover {
+    background-color: var(--corSecundaria);
     text-align: center;
     transition: all 0.8s;
-} 
-
-.sub-menu-2{
-display: none;
 }
 
+.sub-menu-2 {
+    display: none;
+}
 
 .hover-sub:hover .sub-menu-2 {
-display: block;
-position: absolute;
-margin-left: 150px;
-margin-top: -26px;
-background-color: var(--corPadrao1);
-width: 150px;
-list-style: none;
-
+    display: block;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -26px;
+    background-color: var(--corPrimaria);
+    width: 150px;
+    list-style: none;
 }
 
-.logoMaior{
-    position: relative;
-    left: 55em;
-    top:-400px;
+main {
+    color: var(--corQuaternaria);
+    max-width: 2560px;
+    min-width: 200px;
+    font-family: var(--font);
 }
 
-section{
-    color: var(--corLetras);
-    width: 500px;
-    position: relative;
-    left: 20%;
-   
-}
-section p{ 
-    margin-top: 50px;
-
-}
-
-.rodape{
-    color: var(--corLetras);
-    background-color: var(--bkRodape);
-    
-}
-.rodape > ul {
+.sobre {
     display: flex;
-    padding:  50px;
-   
+    align-items: end;
+    color: var(--corSecundaria);
+    box-sizing: border-box;
+    margin: 5em 20em;
 }
 
-.rodape > ul > li {
-   list-style: none;
-   margin:  10px;
-   left: 700px;
-   right: auto;
-   position: relative;
-   cursor: pointer;
-
+.sobre__texto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4em 5em;
 }
 
-table{
-    position: relative;
-    left: -150px;
+.sobre__texto p {
+    font-size: 1.1em;
+    margin: .9em;
+    color: var(--corTerciaria);
+}
+
+.sobre__texto h2 {
+    font-size: 1.6em;
+    color: var(--corSecundaria);
+}
+
+h2 {
+    font-size: 1.8em;
     text-align: center;
-   
-}
-table img{
-    width: 300px;
-    
-}
-table td p{
+    margin: 2em;
+    color: var(--corSecundaria);
 
-width: 300px;
-height: 80px;
-text-align: center;
+}
+
+.destaque {
+    font-family: var(--font);
+    font-weight: 700;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    color: var(--corSecundaria);
+    margin: 1em 2em;
+    box-sizing: border-box;
+}
+
+.destaque img {
+    border: 1px solid var(--corTerciaria);
+    width: 250px;
+    height: 250px;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.destaque p {
+    border: 1px solid var(--corTerciaria);
+    padding: 1em;
+    text-align: center;
+}
+
+.rodape {
+    font-family: var(--font);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 0;
+    color: var(--corQuaternaria);
+    background-color: var(--corTerciaria);
+}
+
+.rodape ul {
+    display: flex;
+}
+
+.rodape ul li {
+    margin: 1em;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.rodape ul li:hover {
+    border-bottom: 1px solid var(--corQuaternaria);
+    color: var(--hoverRodape);
+}
+
+@media (min-width:320px) and (max-width:1024px) {
+    .numContatos {
+        padding: .7em 2em;
+        margin: 0;
+    }
+
+    .logo {
+        margin: 0em;
+    }
+
+    .logo img {
+        width: 100%;
+
+    }
+
+    .menuPrimario {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menuPrimario li {
+        margin: 0.2em 0;
+
+
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .hover-sub:hover .sub-menu-2 {
+        margin-left: 5px;
+        margin-top: 1px;
+
+    }
+
+
+    .sobre {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0em;
+    }
+
+    .sobre__texto {
+        margin: 0;
+    }
+
+    .nivoSlider {
+        height: 190px !important;
+
+    }
+
+    .sobre__logo-Maior img {
+        width: 300px;
+    }
+
+    .destaque {
+        flex-direction: column;
+
+    }
+
+    .destaque p {
+        margin-bottom: 2em;
+
+    }
+
+    .destaque img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .rodape ul {
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1024px)  {
+    .menuPrimario {
+        flex-direction: row;
+
+    }
+
+    .menuPrimario li {
+        margin: 1em 2em;
+
+
+    }
+
+    .nivoSlider {
+        height: 450px !important;
+
+    }
+
+    .sobre__logo-Maior img {
+        width: 100%;
+    }
+    .destaque {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 300px 300px;
+        gap: 6em;
+        padding-bottom: 150px;
+    }
+
+    .rodape ul{
+            flex-direction: row;
+    }
+
+
+}
+
+
+@media (max-width:1440px) {
+
+    .sobre {
+        
+        margin:0 10em ;
+    }
+
+    .sobre__texto {
+        margin: 0;
+    }
+
+
+}
+
+@media (min-width:2560px){
+    .nivoSlider {
+        height: 800px !important;
+
+    }
+    .sobre {
+        
+        margin:0em 20em;
+    }
+
+    .sobre__texto {
+        margin: 0em;
+        font-size: 1.5em;
+    }
+
+
+    .destaque img{
+        width: 500px;
+height: 500px;
+    }
+    
 }
